@@ -41,6 +41,7 @@ const NavBar = () => {
     </form>
   </div>
 </nav>
+<NavCart />
     </div>
     </div>
     </div>

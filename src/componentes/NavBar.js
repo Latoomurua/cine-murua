@@ -1,8 +1,10 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavCart from "./NavCart/NavCart";
 
 const NavBar = () => {
     return(
+    <>
     <div className='container'>
     <div className='row'>
     <div className='col-lg-12 col-xs-12'>
@@ -40,11 +42,12 @@ const NavBar = () => {
       <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
+  <NavCart />
 </nav>
-<NavCart />
     </div>
     </div>
     </div>
+    </>
     )
 };
 

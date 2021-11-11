@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './componentes/NavBar'
-import NavCart from './componentes/NavCart/NavCart'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import ItemCount from './componentes/ItemCount/ItemCount'
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
     <div>
       <NavBar />
       <ItemListContainer greeting="Bienvenidos a mi APP en ReactJS"/>
+      <ItemCount />
     </div>
     </>
   );

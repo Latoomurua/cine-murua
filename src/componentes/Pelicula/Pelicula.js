@@ -7,7 +7,15 @@ const Pelicula = ({title, price, image, description}) => {
     const [mostrar, setMostrar] = useState(true)
 
     const increment = () => {
-        setValoraciones(valoraciones+1);
+        if (valoraciones < 5) setValoraciones(valoraciones+1);
+    }
+
+    const decrement = () => {
+        if (valoraciones >= 1) setValoraciones(valoraciones-1);
+    }
+
+    const send = () => {
+        console.log(`El usuario valoro la pelicula con una cantidad de estrellas de: ${valoraciones}`)
     }
 
     const mostrarDetalles = () => {
@@ -32,7 +40,9 @@ const Pelicula = ({title, price, image, description}) => {
                 }
             </div>
             <div className='pelicula-valoracion'>
-                <p>{valoraciones} Estrellas <button onClick={increment}>Valorar</button></p>
+                <p>{valoraciones} Estrellas <button onClick={send}>Enviar valoracion</button></p>
+                <button onClick={decrement}>Valorar -</button>
+                <button onClick={increment}>Valorar +</button>
             </div>
             <div className='pelicula-price'>
                 <h3>{price}</h3>
